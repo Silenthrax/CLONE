@@ -37,6 +37,8 @@ async def auto_leave():
                                         continue
                 except:
                     pass
+    else:
+        pass
 
 
 asyncio.create_task(auto_leave())

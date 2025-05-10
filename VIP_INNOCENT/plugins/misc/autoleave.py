@@ -11,7 +11,7 @@ from VIP_INNOCENT.utils.database import get_client, is_active_chat, is_autoend
 
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT == "True":
-        while not await asyncio.sleep(900):
+        while not await asyncio.sleep(congif.AUTO_LEAVE_ASSISTANT_TIME):
             from VIP_INNOCENT.core.userbot import assistants
 
             for num in assistants:

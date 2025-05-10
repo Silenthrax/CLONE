@@ -10,7 +10,7 @@ from VIP_INNOCENT.utils.database import get_client, is_active_chat, is_autoend
 
 
 async def auto_leave():
-    if config.AUTO_LEAVING_ASSISTANT:
+    if config.AUTO_LEAVING_ASSISTANT == "True":
         while not await asyncio.sleep(900):
             from VIP_INNOCENT.core.userbot import assistants
 

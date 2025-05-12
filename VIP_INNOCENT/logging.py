@@ -55,3 +55,39 @@ if ENV:
         DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "").split())
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
+
+else:
+    from config import *
+
+    API_ID = Config.API_ID
+    API_HASH = Config.API_HASH
+    DB_URI = Config.DATABASE_URL
+    MONGO_DB_URI = Config.MONGO_DB_URI
+    SUPPORT_CHAT = Config.SUPPORT_CHAT
+    BOT_TOKEN = Config.BOT_TOKEN
+
+    try:
+        OWNER_ID = int(Config.OWNER_ID)
+    except ValueError:
+        raise Exception("Your OWNER_ID variable is not a valid integer.")
+
+    try:
+        DRAGONS = set(int(x) for x in Config.DRAGONS or [])
+    except ValueError:
+        raise Exception("Your sudo or dev users list does not contain valid integers.")
+
+DRAGONS.add(OWNER_ID)
+
+updater = tg.Updater(BOT_TOKEN, workers=WORKERS, use_context=True)
+telethn = TelegramClient("VIP_INNOCENT", API_ID, API_HASH)
+
+pbot = Client("VIP_INNOCENT", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN,in_memory=True)
+dispatcher = updater.dispatcher
+aiohttpsession = ClientSession()
+
+print("[INFO]: Getting Bot Info...")
+BOT_ID = dispatcher.bot.id
+BOT_NAME = dispatcher.bot.first_name
+BOT_USERNAME = dispatcher.bot.username
+
+DRAGONS = list(DRAGONS) + list(DEV_USERS) 

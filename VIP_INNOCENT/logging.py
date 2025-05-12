@@ -6,6 +6,7 @@ import telegram.ext as tg
 from aiohttp import ClientSession
 from pyrogram import Client
 from telethon import TelegramClient
+from config import *
 
 StartTime = time.time()
 
@@ -88,52 +89,51 @@ if ENV:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
 else:
-    from config import *
 
-    API_ID = Config.API_ID
-    API_HASH = Config.API_HASH
-    ALLOW_CHATS = Config.ALLOW_CHATS
-    ALLOW_EXCL = Config.ALLOW_EXCL
-    DB_URI = Config.DATABASE_URL
-    DEL_CMDS = Config.DEL_CMDS
-    EVENT_LOGS = Config.LOGGER_ID
-    LOAD = Config.LOAD
-    MONGO_DB_URI = Config.MONGO_DB_URI
-    NO_LOAD = Config.NO_LOAD
-    STRICT_GBAN = Config.STRICT_GBAN
-    SUPPORT_CHAT = Config.SUPPORT_CHAT
-    TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
-    BOT_TOKEN = Config.TOKEN
-    WORKERS = Config.WORKERS
+    API_ID = config.API_ID
+    API_HASH = config.API_HASH
+    ALLOW_CHATS = config.ALLOW_CHATS
+    ALLOW_EXCL = config.ALLOW_EXCL
+    DB_URI = config.DATABASE_URL
+    DEL_CMDS = config.DEL_CMDS
+    EVENT_LOGS = config.LOGGER_ID
+    LOAD = config.LOAD
+    MONGO_DB_URI = config.MONGO_DB_URI
+    NO_LOAD = config.NO_LOAD
+    STRICT_GBAN = config.STRICT_GBAN
+    SUPPORT_CHAT = config.SUPPORT_CHAT
+    TEMP_DOWNLOAD_DIRECTORY = config.TEMP_DOWNLOAD_DIRECTORY
+    BOT_TOKEN = config.TOKEN
+    WORKERS = config.WORKERS
 
     try:
-        OWNER_ID = int(Config.OWNER_ID)
+        OWNER_ID = int(config.OWNER_ID)
     except ValueError:
         raise Exception("Your OWNER_ID variable is not a valid integer.")
 
     try:
-        BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
+        BL_CHATS = set(int(x) for x in config.BL_CHATS or [])
     except ValueError:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
     try:
-        DRAGONS = set(int(x) for x in Config.DRAGONS or [])
-        DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
+        DRAGONS = set(int(x) for x in config.DRAGONS or [])
+        DEV_USERS = set(int(x) for x in config.DEV_USERS or [])
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in Config.DEMONS or [])
+        DEMONS = set(int(x) for x in config.DEMONS or [])
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
     try:
-        TIGERS = set(int(x) for x in Config.TIGERS or [])
+        TIGERS = set(int(x) for x in config.TIGERS or [])
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     try:
-        WOLVES = set(int(x) for x in Config.WOLVES or [])
+        WOLVES = set(int(x) for x in config.WOLVES or [])
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
@@ -143,9 +143,9 @@ DEV_USERS.add(OWNER_ID)
 
 
 updater = tg.Updater(BOT_TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("mukesh", API_ID, API_HASH)
+telethn = TelegramClient("VIP_INNOCENT", API_ID, API_HASH)
 
-pbot = Client("MukeshRobot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN,in_memory=True)
+pbot = Client("VIP_INNOCENT", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN,in_memory=True)
 dispatcher = updater.dispatcher
 aiohttpsession = ClientSession()
 

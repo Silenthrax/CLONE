@@ -28,7 +28,7 @@ ASSUSERNAME = getenv("ASSUSERNAME" , "Naksh_x_assistant")
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 MONGO_DB_URI = getenv("MONGO_DB_URI")
-DATABASE_URL = getenv("DB_URL")
+DATABASE_URL = getenv("DB_URL", "postgresql://moonwalahehe:moonwalahehe$100@music:8080/naksh")
 API_KEY = getenv("API_KEY")
 LOGGER = True
 #---------------------------------------------------------------

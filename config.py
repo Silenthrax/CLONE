@@ -29,6 +29,7 @@ ASSUSERNAME = getenv("ASSUSERNAME" , "Naksh_x_assistant")
 #---------------------------------------------------------------
 MONGO_DB_URI = getenv("MONGO_DB_URI")
 DB_URL = getenv("DB_URL")
+WORKERS = int(getenv("WORKERS")
 API_KEY = getenv("API_KEY")
 #---------------------------------------------------------------
 #---------------------------------------------------------------

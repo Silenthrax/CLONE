@@ -107,33 +107,33 @@ else:
     WORKERS = WORKERS
 
     try:
-        OWNER_ID = int(config.OWNER_ID)
+        OWNER_ID = int(OWNER_ID)
     except ValueError:
         raise Exception("Your OWNER_ID variable is not a valid integer.")
 
     try:
-        BL_CHATS = set(int(x) for x in config.BL_CHATS or [])
+        BL_CHATS = set(int(x) for x in BL_CHATS or [])
     except ValueError:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
     try:
-        DRAGONS = set(int(x) for x in config.DRAGONS or [])
-        DEV_USERS = set(int(x) for x in config.DEV_USERS or [])
+        DRAGONS = set(int(x) for x in DRAGONS or [])
+        DEV_USERS = set(int(x) for x in DEV_USERS or [])
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in config.DEMONS or [])
+        DEMONS = set(int(x) for x in DEMONS or [])
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
     try:
-        TIGERS = set(int(x) for x in config.TIGERS or [])
+        TIGERS = set(int(x) for x in TIGERS or [])
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     try:
-        WOLVES = set(int(x) for x in config.WOLVES or [])
+        WOLVES = set(int(x) for x in WOLVES or [])
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 

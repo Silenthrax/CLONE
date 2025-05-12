@@ -83,11 +83,6 @@
       "description": "in format https",
       "value": "",
       "required": true
-    },
-    "DATABASE_URL": {
-      "description": "prostate sql",
-      "value": "",
-      "required": true
     }
   },
   "buildpacks": [

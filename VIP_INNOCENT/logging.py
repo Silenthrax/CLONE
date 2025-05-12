@@ -46,6 +46,7 @@ if ENV:
     ALLOW_EXCL = os.environ.get("ALLOW_EXCL", False)
     DB_URI = os.environ.get("DATABASE_URL")
     DEL_CMDS = bool(os.environ.get("DEL_CMDS", False))
+    EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     LOAD = os.environ.get("LOAD", "").split()
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
@@ -95,6 +96,7 @@ else:
     ALLOW_EXCL = Config.ALLOW_EXCL
     DB_URI = Config.DATABASE_URL
     DEL_CMDS = Config.DEL_CMDS
+    EVENT_LOGS = Config.LOGGER_ID
     LOAD = Config.LOAD
     MONGO_DB_URI = Config.MONGO_DB_URI
     NO_LOAD = Config.NO_LOAD

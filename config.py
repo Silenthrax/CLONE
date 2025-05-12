@@ -28,9 +28,9 @@ ASSUSERNAME = getenv("ASSUSERNAME" , "Naksh_x_assistant")
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 MONGO_DB_URI = getenv("MONGO_DB_URI")
-DB_URL = getenv("DB_URL")
-WORKERS = int(getenv("WORKERS", 8)
+DATABASE_URL = getenv("DB_URL")
 API_KEY = getenv("API_KEY")
+LOGGER = True
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
@@ -131,6 +131,20 @@ lyrical = {}
 votemode = {}
 autoclean = []
 confirmer = {}
+BL_CHATS = [] 
+DRAGONS = []
+DEV_USERS = []  
+DEMONS = [] 
+TIGERS = []  
+WOLVES = []
+ALLOW_CHATS = True
+ALLOW_EXCL = True
+DEL_CMDS = True
+LOAD = []
+NO_LOAD = []
+STRICT_GBAN = True
+TEMP_DOWNLOAD_DIRECTORY = "./"
+WORKERS = 8
 
 # ------------------------------------
 # ------------------------------------

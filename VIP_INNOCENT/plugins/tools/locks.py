@@ -15,18 +15,18 @@ from telegram.utils.helpers import mention_html
 
 import VIP_INNOCENT.utils.modules.sql.locks_sql as sql
 from VIP_INNOCENT import DRAGONS, LOGGER, dispatcher
-from MukeshRobot.modules.connection import connected
-from MukeshRobot.modules.disable import DisableAbleCommandHandler
-from MukeshRobot.modules.helper_funcs.alternate import send_message, typing_action
-from MukeshRobot.modules.helper_funcs.chat_status import (
+from VIP_INNOCENT.utils.modules.connection import connected
+from VIP_INNOCENT.utils.modules.disable import DisableAbleCommandHandler
+from VIP_INNOCENT.utils.modules.helper_funcs.alternate import send_message, typing_action
+from VIP_INNOCENT.utils.modules.helper_funcs.chat_status import (
     can_delete,
     is_bot_admin,
     is_user_admin,
     user_admin,
     user_not_admin,
 )
-from MukeshRobot.modules.log_channel import loggable
-from MukeshRobot.modules.sql.approve_sql import is_approved
+from VIP_INNOCENT.utils.modules.log_channel import loggable
+from VIP_INNOCENT.utils.modules.sql.approve_sql import is_approved
 
 ad = AlphabetDetector()
 

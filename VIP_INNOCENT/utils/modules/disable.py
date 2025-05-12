@@ -22,12 +22,12 @@ FILENAME = __name__.rsplit(".", 1)[-1]
 if is_module_loaded(FILENAME):
 
 
-    from MukeshRobot.modules.helper_funcs.chat_status import (
+    from VIP_INNOCENT.utils.modules.helper_funcs.chat_status import (
         connection_status,
         is_user_admin,
         user_admin,
     )
-    from MukeshRobot.modules.sql import disable_sql as sql
+    from VIP_INNOCENT.utils.modules.sql import disable_sql as sql
 
     DISABLE_CMDS = []
     DISABLE_OTHER = []

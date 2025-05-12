@@ -14,7 +14,7 @@ from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.utils.helpers import mention_html
 
 import VIP_INNOCENT.utils.modules.sql.locks_sql as sql
-from config import DRAGONS, LOGGER, dispatcher
+from VIP_INNOCENT import DRAGONS, LOGGER, dispatcher
 from MukeshRobot.modules.connection import connected
 from MukeshRobot.modules.disable import DisableAbleCommandHandler
 from MukeshRobot.modules.helper_funcs.alternate import send_message, typing_action

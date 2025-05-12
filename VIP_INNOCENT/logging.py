@@ -45,7 +45,8 @@ if ENV:
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
-
+    WORKERS = int(os.environ.get("WORKERS", 8))
+    
     try:
         OWNER_ID = int(os.environ.get("OWNER_ID", None))
     except ValueError:
@@ -65,7 +66,7 @@ else:
     MONGO_DB_URI = Config.MONGO_DB_URI
     SUPPORT_CHAT = Config.SUPPORT_CHAT
     BOT_TOKEN = Config.BOT_TOKEN
-
+    WORKERS = config.WORKERS
     try:
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
@@ -91,3 +92,14 @@ BOT_NAME = dispatcher.bot.first_name
 BOT_USERNAME = dispatcher.bot.username
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS) 
+
+from VIP_INNOCENT.utils.modules.helper_funcs.handlers import (
+    CustomCommandHandler,
+    CustomMessageHandler,
+    CustomRegexHandler,
+)
+
+# make sure the regex handler can take extra kwargs
+tg.RegexHandler = CustomRegexHandler
+tg.CommandHandler = CustomCommandHandler
+tg.MessageHandler = CustomMessageHandler

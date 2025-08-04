@@ -15,7 +15,7 @@ API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 BOT_ID = getenv("BOT_ID")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","btw_deva")
+OWNER_USERNAME = getenv("OWNER_USERNAME","")
 # --------------------------------------------------------
 BOT_USERNAME = getenv("BOT_USERNAME" , "DEVA_MUSICBOT")
 # --------------------------------------------------------
@@ -55,10 +55,10 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-SOURCE = getenv("SOURCE", "https://github.com/hide-sudo/VIP_MUSIC")
+SOURCE = getenv("SOURCE", "https://t.me/addstickers/vid_6304542145_by_YumekoXRobot")
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/hide-sudo/VIP_MUSIC",
+    "https://github.com/Silenthrax/CLONE",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "DEVA")
 GIT_TOKEN = getenv(
